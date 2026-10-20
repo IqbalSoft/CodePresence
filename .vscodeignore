@@ -1,0 +1,8 @@
+test/**
+.vscode/**
+assets/**
+scripts/**
+activity.js
+extension.js
+.gitignore
+*.vsix

@@ -1,0 +1,62 @@
+{
+  "name": "discord-presence-vscode",
+  "displayName": "Discord Coding Presence",
+  "description": "Show your current coding language and file on Discord, with an optional project name.",
+  "version": "0.2.2",
+  "publisher": "dev-devils",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "discord",
+    "rich presence",
+    "coding"
+  ],
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Discord Coding Presence",
+      "properties": {
+        "discordCodingPresence.applicationId": {
+          "type": "string",
+          "default": "1562163004550946826",
+          "scope": "application",
+          "description": "Discord application ID. Change this only if you use your own Discord application with the same uploaded image assets."
+        },
+        "discordCodingPresence.showFileName": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "Show the active file name on your public Discord activity."
+        },
+        "discordCodingPresence.showProjectName": {
+          "type": "boolean",
+          "default": false,
+          "scope": "application",
+          "description": "Show the active workspace folder name on your public Discord activity."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test",
+    "build": "esbuild extension.js --bundle --minify --platform=node --target=node20 --external:vscode --outfile=dist/extension.js",
+    "package": "npm run build && vsce package --no-dependencies --allow-missing-repository"
+  },
+  "dependencies": {
+    "@xhayper/discord-rpc": "^1.5.1"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.6.1",
+    "esbuild": "^0.28.2"
+  }
+}
