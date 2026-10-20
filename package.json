@@ -2,8 +2,9 @@
   "name": "discord-presence-vscode",
   "displayName": "Discord Coding Presence",
   "description": "Show your current coding language and file on Discord, with an optional project name.",
-  "version": "0.2.2",
+  "version": "0.2.5",
   "publisher": "dev-devils",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.90.0"
   },
