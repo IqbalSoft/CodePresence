@@ -18,6 +18,12 @@ If Discord shows the application's default icon, refresh the Art Assets page to 
 
 This extension uses local Discord RPC. It runs in desktop VS Code, including when your workspace is remote. It does not work in browser-only VS Code.
 
+## Connection controls
+
+Click **Discord: Connect** or **Discord: Disconnect** in the VS Code status bar. While connecting, click **Discord: Connecting…** to cancel. Both commands are also available in the Command Palette as **Discord Coding Presence: Connect** and **Discord Coding Presence: Disconnect**.
+
+Connect starts a fresh connection immediately, so you can recover presence without restarting VS Code. Disconnect clears your activity and pauses automatic retries until you click Connect or restart VS Code. Automatic reconnects otherwise continue every 15 seconds. The elapsed timer continues across manual reconnects.
+
 ## Development
 
 Run `npm install` and `npm run build`, then press **F5** in VS Code to open an Extension Development Host. Run `npm test` for the activity check.

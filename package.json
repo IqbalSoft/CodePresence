@@ -2,7 +2,7 @@
   "name": "discord-presence-vscode",
   "displayName": "Discord Coding Presence",
   "description": "Show your current coding language and file on Discord, with an optional project name.",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "publisher": "dev-devils",
   "icon": "icon.png",
   "engines": {
@@ -46,7 +46,17 @@
           "description": "Show the active workspace folder name on your public Discord activity."
         }
       }
-    }
+    },
+    "commands": [
+      {
+        "command": "discordCodingPresence.connect",
+        "title": "Discord Coding Presence: Connect"
+      },
+      {
+        "command": "discordCodingPresence.disconnect",
+        "title": "Discord Coding Presence: Disconnect"
+      }
+    ]
   },
   "scripts": {
     "test": "node --test",
